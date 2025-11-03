@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Here</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+</head>
+<body>
+    <section class="wrapper">
+        <header>
+            <h1>Order Here</h1>
+        </header>
+
+        <main>
+            <form>
+                <h3>Choose Your Meal</h3>
+                <div class="menu-list">
+                    <label><input type="checkbox" id="pasta_bowl" value="120"> Pasta Bowl (₱120)</label><br>
+                    <label><input type="checkbox" id="chicken_wrap" value="90"> Chicken Wrap (₱90)</label><br>
+                    <label><input type="checkbox" id="veggie_soup" value="70"> Vegetable Soup (₱70)</label><br>
+                    <label><input type="checkbox" id="mint_drink" value="45"> Mint Drink (₱45)</label><br>
+                    <label><input type="checkbox" id="bottled_water" value="25"> Bottled Water (₱25)</label>
+                </div>
+
+                <h3>Customer Info</h3>
+                <input type="text" id="client_name" placeholder="Full Name"><br>
+                <input type="text" id="client_loc" placeholder="Delivery Address"><br>
+                <input type="text" id="client_num" placeholder="Contact Number"><br><br>
+
+                <input type="button" py-click="create_order" value="Submit Order" class="btn">
+            </form>
+
+            <div id="result_box" class="display-box"></div>
+        </main>
+    </section>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
